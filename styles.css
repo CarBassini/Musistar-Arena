@@ -292,32 +292,94 @@ footer {
 
 #login {
     background-image: url(./assets/fondo.png);
+    background-size: cover;
 }
 
 #mainlogin {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 6fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
     margin: 0 5vh;
+    flex-direction: column;
 }
 
 h3 {
     grid-column: 1 / 2;
-    grid-row: 1 / 5;
+    grid-row: 3 / 4;
     font-family: Lineas;
     font-size: 10vh;
+    align-self: center;
+    padding: 0 8vh;
+    text-shadow: 5px 5px 5px #00000056;
+}
+
+.botones {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-content: center;
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.botones p {
+    font-family: Hoves;
+    color: #771168;
+    margin: auto 2vh;
     align-items: center;
 }
 
-p {
+.botonhuella {
+    width: 5vw;
+    height: 4vh;
+    background-color: #771168;
+    border: #771168 solid;
+    border-radius: 999px;
+}
+
+#huella {
+    color: #F5F5F4;
+}
+
+#usuarioplus {
+    color: #771168;
+}
+
+.botonusuariomas {
+    width: 5vw;
+    height: 4vh;
+    background-color: transparent;
+    border: #771168 solid;
+    border-radius: 999px;
+}
+
+.mensajeregistro {
+    display: flex;
+    flex-direction: column;
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    display: inline-block;
+    grid-row: 2 / 3;
+    font-family: Hoves;
+    justify-content: center;
+    margin: 2vh 0;
+}
+
+#instruccion {
+    font-size: 2vh;
+    color: #f5f5f4a7;
+    padding-top: 1vh;
+}
+
+form {
+    height: auto;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    grid-template-rows: auto;
 }
 
 .categoria {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    width: 95%;
+    height: 6vh;
     margin: 2vh;
     background: transparent;
     border: 1px solid;
@@ -325,19 +387,48 @@ p {
     border-radius: 6px;
 }
 
+select {
+    font-family: Hoves;
+    color: #f5f5f4a7;
+}
+
+select option {
+    color: #000;
+}
+
 .terminosycondiciones {
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     display: flex;
     gap: 8px;
     align-items: center;
+    justify-content: center;
+    font-family: Hoves;
+    color: #F5F5F4;
+    font-size: 2vh;
+    padding: 2vh 0;
 }
 
 #terminosycondiciones {
     width: 16px;
 }
 
-button {
+.crearcuenta {
+    width: 95%;
+    height: 6vh;
     grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    grid-row: 5 / 6;
+    border-radius: 999px;
+    border: 1px #F5F5F4 solid;
+    background-color: transparent;
+    font-family: Hoves;
+    color: #000;
+    justify-self: center;
+    margin-top: 4vh;
+}
+
+.crearcuenta:hover {
+    background-color: #771168;
+    border-color: #771168;
+    color: #F5F5F4;
 }
